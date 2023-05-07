@@ -236,7 +236,7 @@ class ZSpotifyApi:
         audio_segment = AudioSegment.from_file(audio_bytes)
 
         # bitrate = "320k"
-        audio_segment.export(output_path, format="m4a", codec="alac_at") # format="aac", bitrate=bitrate)
+        audio_segment.export(output_path, codec="alac_at") # format="aac", bitrate=bitrate)
 
     # INFO
     def get_audio_info(self, track_id, get_genres=False):
