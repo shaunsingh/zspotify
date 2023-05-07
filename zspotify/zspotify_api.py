@@ -18,7 +18,7 @@ class ZSpotifyApi:
     def __init__(self,
                  sanitize=["\\", "/", ":", "*", "?", "'", "<", ">", '"'],
                  config_dir=Path.home() / ".zspotify",
-                 music_format="mp3",
+                 music_format="aac",
                  force_premium=False,
                  anti_ban_wait_time=5,
                  override_auto_wait=False,
