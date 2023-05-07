@@ -235,11 +235,8 @@ class ZSpotifyApi:
         """Converts raw audio (ogg vorbis) to user specified format"""
         audio_segment = AudioSegment.from_file(audio_bytes)
 
-        bitrate = "160k"
-        if self.quality == AudioQuality.VERY_HIGH:
-            bitrate = "320k"
-
-        audio_segment.export(output_path, format=self.music_format, bitrate=bitrate)
+        bitrate = "320k"
+        audio_segment.export(output_path, format="alac", bitrate=bitrate)
 
     # INFO
     def get_audio_info(self, track_id, get_genres=False):
