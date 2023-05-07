@@ -214,7 +214,7 @@ class ZSpotify:
         parser.add_argument(
             "-af", "--audio-format",
             help="Audio format to download the tracks",
-            default="aac", choices=["aac", "ogg"])
+            default="alac", choices=["alac", "ogg"])
         parser.add_argument(
             "--album-in-filename",
             help="Adds the album name to the filename",
