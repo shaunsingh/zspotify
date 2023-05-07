@@ -18,7 +18,7 @@ class ZSpotifyApi:
     def __init__(self,
                  sanitize=["\\", "/", ":", "*", "?", "'", "<", ">", '"'],
                  config_dir=Path.home() / ".zspotify",
-                 music_format="aac",
+                 music_format="aiff",
                  force_premium=False,
                  anti_ban_wait_time=5,
                  override_auto_wait=False,
@@ -235,8 +235,9 @@ class ZSpotifyApi:
         """Converts raw audio (ogg vorbis) to user specified format"""
         audio_segment = AudioSegment.from_file(audio_bytes)
 
-        bitrate = "320k"
-        audio_segment.export(output_path, format="aac", codec="aac_at", bitrate=bitrate)
+        # bitrate = "320k"
+        # audio_segment.export(output_path, format="aiff", bitrate=bitrate)
+        audio_segment.export(output_path, format="aiff", bitrate=bitrate)
 
     # INFO
     def get_audio_info(self, track_id, get_genres=False):
