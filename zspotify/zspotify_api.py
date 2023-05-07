@@ -237,7 +237,7 @@ class ZSpotifyApi:
 
         # bitrate = "320k"
         # audio_segment.export(output_path, format="aiff", bitrate=bitrate)
-        audio_segment.export(output_path, format="aiff", bitrate=bitrate)
+        audio_segment.export(output_path, format="aiff")
 
     # INFO
     def get_audio_info(self, track_id, get_genres=False):
