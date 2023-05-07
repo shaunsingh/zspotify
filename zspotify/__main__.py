@@ -214,7 +214,7 @@ class ZSpotify:
         parser.add_argument(
             "-af", "--audio-format",
             help="Audio format to download the tracks",
-            default="aac", choices=["aac", "ogg"])
+            default="aiff", choices=["aiff", "ogg"])
         parser.add_argument(
             "--album-in-filename",
             help="Adds the album name to the filename",
@@ -337,7 +337,7 @@ class ZSpotify:
         extension = str(filename).split('.')[-1]
 
         # mp3 uses id3
-        if extension == 'aac':
+        if extension == 'aiff':
             tags = id3.ID3(filename)
             if artist is not None:
                 # TPE1 Lead Artist/Performer/Soloist/Group
