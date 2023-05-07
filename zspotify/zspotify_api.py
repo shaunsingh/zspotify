@@ -18,7 +18,7 @@ class ZSpotifyApi:
     def __init__(self,
                  sanitize=["\\", "/", ":", "*", "?", "'", "<", ">", '"'],
                  config_dir=Path.home() / ".zspotify",
-                 music_format="m4a",
+                 music_format="aac",
                  force_premium=False,
                  anti_ban_wait_time=5,
                  override_auto_wait=False,
@@ -236,7 +236,7 @@ class ZSpotifyApi:
         audio_segment = AudioSegment.from_file(audio_bytes)
 
         bitrate = "320k"
-        audio_segment.export(output_path, codec="alac_at", bitrate=bitrate)
+        audio_segment.export(output_path, format="aac", codec="aac_at", bitrate=bitrate)
 
     # INFO
     def get_audio_info(self, track_id, get_genres=False):
